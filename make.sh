@@ -10,7 +10,25 @@ download_files()
     tar xvf VLGothic-20141206.tar.xz VLGothic/VL-Gothic-Regular.ttf
 }
 
+tar_files()
+{
+    mkdir -p cygwin
+    cp -rfv *.bat cygwin/
+    cp -rfv *.exe cygwin/
+    cp -rfv VLGothic cygwin/
+    cp -rfv *.cfg cygwin/
+    tar czvf cygwin.tar.gz cygwin/
+    rm -rf cygwin/
+}
 
-download_files
-
-unix2dos *.bat 
+case $1 in
+    d|download)
+        download_files
+        ;;
+    t|tar)
+        tar_files
+        ;;
+    *)
+        unix2dos *.bat 
+        ;;
+esac
