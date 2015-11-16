@@ -9,6 +9,6 @@ set packages=vim,ctags,cscope,python,bash-completion,git,wget,make,cmake,gcc-cor
 
 setup-x86.exe --site %site% --root %cd%\\root %opts% --packages %packages%
 
-start VL-Gothic-Regular.ttf
+start VLGothic/VL-Gothic-Regular.ttf
 
 REM  pause
