@@ -29,6 +29,6 @@ case $1 in
         tar_files
         ;;
     *)
-        unix2dos *.bat 
+        unix2dos *.bat *.txt
         ;;
 esac
